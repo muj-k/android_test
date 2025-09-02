@@ -24,10 +24,10 @@
         android:layout_width="217dp"
         android:layout_height="198dp"
         android:layout_marginStart="97dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="164dp"
         android:layout_marginEnd="97dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:srcCompat="@drawable/ic_android" />
@@ -38,8 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="64dp"
-        android:text="Button"
+        android:text="Change"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextText"
         app:layout_constraintTop_toBottomOf="@+id/text" />
 
     <EditText
@@ -60,5 +62,14 @@
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/editTextText"
         tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Save"
+        app:layout_constraintStart_toEndOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
