@@ -3,7 +3,6 @@ package jp.ac.meijou.android.s241205063;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,14 +54,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        prefDataStore = prefDataStore.getInstance(this);
+        prefDataStore = PrefDataStore.getInstance(this);
 
         binding.saveButton.setOnClickListener(view -> {
             var text1 = binding.editTextText.getText().toString();
             var text2 = binding.editTextText2.getText().toString();
             prefDataStore.setString("name",text1 + text2);
         });
+
         prefDataStore.getString("name")
                 .ifPresent(name -> binding.text.setText(name));
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        prefDataStore.getString("name")
+                .ifPresent(name -> binding.text.setText(name));
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        var text1 = binding.editTextText.getText().toString();
+        var text2 = binding.editTextText2.getText().toString();
+        prefDataStore.setString("name",text1 + text2);
     }
 }
