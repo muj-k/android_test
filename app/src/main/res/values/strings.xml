@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">モバイルアプリ開発A</string>
+    <string name ="text">Hello jogiken</string>
 </resources>
