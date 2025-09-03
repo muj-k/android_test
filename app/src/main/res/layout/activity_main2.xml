@@ -43,22 +43,40 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="明示的"
         app:layout_constraintEnd_toStartOf="@id/button3"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintTop_toTopOf="@id/button2"
-        app:layout_constraintStart_toEndOf="@id/button2"
+        android:text="暗黙的"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="送信"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextText3"
+        app:layout_constraintTop_toTopOf="@+id/editTextText3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
