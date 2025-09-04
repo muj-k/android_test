@@ -27,6 +27,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="@id/textView8"
         app:layout_constraintTop_toBottomOf="@id/textView8"
+        tools:text="meijo"
         tools:layout_editor_absoluteX="121dp"
         tools:layout_editor_absoluteY="315dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
